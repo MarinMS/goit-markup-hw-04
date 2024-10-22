@@ -124,6 +124,7 @@ address {
 
 .header-item {
   padding: 24px 0;
+  position: relative;
 }
 
 .header-item-link {
@@ -140,6 +141,21 @@ address {
 }
 
 .header-item-link:focus {
+  color: #404bbf;
+}
+
+.header-item:first-child .header-item-link::after {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  position: absolute;
+  bottom: 0;
+}
+
+.header-item:first-child .header-item-link {
   color: #404bbf;
 }
 
@@ -173,6 +189,14 @@ address {
 
 /* ---------------------------HERO----------------------------- */
 .hero {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -240,6 +264,21 @@ address {
 .advantages-text {
 }
 
+.advantages-icon {
+  fill: #2e2f42;
+}
+
+.card-icon {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  padding: 24px;
+  background-color: #f4f4fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
 /* ---------------------------TEAM----------------------------- */
 .team {
   background-color: #f4f4fd;
@@ -278,6 +317,30 @@ address {
 
 .team-text {
   text-align: center;
+  margin-bottom: 8px;
+}
+.team-soc-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team-soc-item {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-soc-item:hover {
+  background-color: #404bbf;
+}
+
+.soc-icon {
+  fill: #f4f4fd;
 }
 
 /* ---------------------------PORTFOLIO----------------------------- */
@@ -297,6 +360,11 @@ address {
 }
 
 .portfolio-item {
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .card-info {
